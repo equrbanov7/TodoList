@@ -1,0 +1,108 @@
+ /* Reset default form styles */
+ form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the form container */
+form {
+    max-width: 300px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the text input */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Style the button */
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+button[type="button"]:hover {
+    background-color: #45a049;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 300px;
+    height: 250px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    /* display: none; */
+   
+    position: relative;
+    padding-right: 8px;
+}
+
+/* Style the list item (li) */
+li {
+    padding: 12px 8px 12px 50px;
+    margin-bottom: 5px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Optional: Hover effect for list items */
+/* li:hover {
+    background-color: #e0e0e0;
+} */
+
+ul li::after{
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-size: cover;
+    background-image: url("img/unchecked.png");
+    background-position: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 1rem;
+
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: red;
+}
+ul li.checked::after    {
+    background-image: url("img/checked.png");
+}
+
+ul li span{
+    position: absolute;
+
+    height: 40px;
+    width: 40px;
+    color: #555;
+    
+    text-align: center;
+    border-radius: 50%;
+    right: 0;
+    cursor: pointer;
+}
+
